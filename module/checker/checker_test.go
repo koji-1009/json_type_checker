@@ -87,3 +87,40 @@ func TestReadJsonFile(t *testing.T) {
 		}
 	}
 }
+
+// test ReadCheckerRuleJsonFile function
+func TestReadCheckerRuleJsonFile(t *testing.T) {
+	// test file path
+	const path = "../fixture/users_type.json"
+	// read json file
+	json, err := ReadCheckerRuleJsonFile(path)
+	// check error
+	if err != nil {
+		t.Errorf("Error: %s", err)
+	}
+
+	// check json
+	if json == nil {
+		t.Errorf("Error: json is nil")
+	}
+
+	// check json has file_name property
+	if json.FileName != "users_type.json" {
+		t.Errorf("Error: json file_name is not users.json")
+	}
+
+	// check json has top_level_type property
+	if json.TopLevelType != "users" {
+		t.Errorf("Error: json top_level_type is not users")
+	}
+
+	// check json has types property
+	if json.Types == nil {
+		t.Errorf("Error: json types is nil")
+	}
+
+	// check json types length
+	if len(json.Types) != 3 {
+		t.Errorf("Error: json types length is not 3")
+	} 
+}
