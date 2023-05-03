@@ -1,0 +1,48 @@
+{
+  "file_name": "users_type.json",
+  "top_level_type": "users",
+  "types": [
+    {
+      "type_name": "users",
+      "value_type": {
+        "type": "array",
+        "values": "user"
+      }
+    },
+    {
+      "type_name": "user",
+      "value_type": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "enum",
+          "values": [
+            "Reader",
+            "Author"
+          ]
+        },
+        "age": {
+          "type": "number",
+          "min": 0,
+          "max": 100
+        },
+        "social": {
+          "type": "object",
+          "value": "social"
+        }
+      }
+    },
+    {
+      "type_name": "social",
+      "value_type": {
+        "facebook": {
+          "type": "string"
+        },
+        "twitter": {
+          "type": "string"
+        }
+      }
+    }
+  ]
+}
