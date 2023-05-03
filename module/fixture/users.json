@@ -5,8 +5,8 @@
       "type": "Reader",
       "age": 23,
       "social": {
-        "facebook": "https://facebook.com",
-        "twitter": "https://twitter.com"
+        "facebook": "https://example.com/facebook/elliot",
+        "twitter": "https://example.com/twitter/elliot"
       }
     },
     {
@@ -14,8 +14,8 @@
       "type": "Author",
       "age": 17,
       "social": {
-        "facebook": "https://facebook.com",
-        "twitter": "https://twitter.com"
+        "facebook": "https://example.com/facebook/fraser",
+        "twitter": "https://example.com/twitter/fraser"
       }
     }
   ]
